@@ -1,0 +1,75 @@
+main {
+  background-color: var(--secondary);
+}
+
+.main-section {
+  background-image: url('assets/icons/bottom-bg.svg');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 100%;
+}
+
+.main-section article {
+  height: 98vh;
+  margin: 0 auto;
+  max-width: 1300px;
+
+  position: relative;
+}
+
+.content-container {
+  padding-top: 120px;
+}
+
+.main-title-bold {
+  color: var(--text-white);
+  font-size: 20px;
+  font-family: var(--family-baloo);
+  font-size: 4rem;
+  line-height: 1;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.sub-title {
+  font-size: 4rem;
+  color: var(--text-white);
+  font-family: var(--family-baloo);
+  font-weight: var(--font-weight-regular);
+  max-width: 700px;
+  line-height: 1;
+}
+
+.vip-text {
+  font-family: inherit;
+  font-size: 7rem;
+  color: var(--secondary);
+  text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary), -1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
+}
+
+.pet-icon {
+  width: 200px;
+  height: 140px;
+  margin-left: 20px;
+  color: var(--primary);
+}
+
+.petshop-logo {
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 0;
+}
+
+.dog-picture {
+  height: 365px;
+  width: 365px;
+  object-fit: cover;
+  border-radius: 50%;
+}

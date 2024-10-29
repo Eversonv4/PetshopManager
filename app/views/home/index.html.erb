@@ -1,0 +1,31 @@
+<main>
+  <section class="main-section">
+    <article>
+      <%= image_tag("icons/petshop-logo.svg", class: "petshop-logo") %>
+
+      <div class="content-container flex-center-between">
+        <div>
+          <h2 class="main-title-bold">
+            TRAGA SEU
+            <%= svg_tag "icons/Pet.svg", class: "pet-icon" %>
+          </h2>
+
+          <h3 class="sub-title">dê a ele o tratamento que ele merece.</h3>
+
+          <h3 class="sub-title" style="margin-top: 60px;">
+            O seu aumiguinho terá tratamento
+            <strong class="vip-text">VIP</strong>
+          </h3>
+        </div>
+
+        <div style="margin-top: auto;">
+          <%= image_tag("pictures/dog-cat.jpg", class: "dog-picture") %>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <%= svg_tag "icons/Pet.svg", style: "color: red; background-color: green;" %>
+  </section>
+</main>

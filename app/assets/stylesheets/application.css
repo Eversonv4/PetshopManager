@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+:root {
+  --primary: #ffae00;
+  --secondary: #03989e;
+  --text-dark: #383838;
+  --text-white: #f7f7f7;
+  --gray-light: #f8f9fa;
+  --gray-border-light: #e9ecef;
+  --danger-red: #dc3545;
+
+  --family-poppins: "Poppins", sans-serif;
+  --family-instrument: "Instrument Sans", serif;
+  --family-baloo: "Baloo 2", sans-serif;
+
+  --font-size-small: 1.2rem;
+  --font-size-medium: 1.5rem;
+  --font-size-mid-lg: 2rem;
+  --font-size-large: 2.4rem;
+  --font-size-xlarge: 3.2rem;
+  --font-size-xxlarge: 4.8rem;
+  --font-size-xxxlarge: 6.4rem;
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-black: 900;
+
+  --border-radius-small: 0.4rem;
+  --border-radius-medium: 0.8rem;
+  --border-radius-large: 1.6rem;
+  --border-radius-xlarge: 3.2rem;
+  --border-radius-xxlarge: 6.4rem;
+  --border-radius-xxxlarge: 12.8rem;
+
+  --shadow-small: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.1);
+  --shadow-large: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.1);
+  --shadow-xlarge: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
+  --shadow-xxlarge: 0 6.4rem 12.8rem rgba(0, 0, 0, 0.1);
+  --shadow-xxxlarge: 0 12.8rem 25.6rem rgba(0, 0, 0, 0.1);
+
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
