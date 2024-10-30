@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   # Defines the "about-us" path route ("/about-us")
   get "about-us" => "about_us#index", as: :about_us
   get "contact" => "contact#index", as: :contact
+  get "shop" => "shop#index", as: :shop
+  get "patient_area" => "patient_area#index", as: :patient_area
 end

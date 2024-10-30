@@ -9,13 +9,16 @@
           <%= link_to "Home", root_path %>
         </li>
         <li>
+          <%= link_to "Shop", shop_path,  class: "header-btn-shop" %>
+        </li>
+        <li>
           <%= link_to "Contato", contact_path %>
         </li>
         <li>
           <%= link_to "Quem Somos", about_us_path %>
         </li>
         <li>
-          <%= link_to "Area do paciente", about_us_path, class: "header-btn-highlight" %>
+          <%= link_to "Area do paciente", patient_area_path, class: "header-btn-highlight" %>
         </li>
         <li>
           <%= link_to (about_us_path), class: "header-favorite__container" do %>
