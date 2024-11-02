@@ -57,3 +57,7 @@ group :test do
 end
 
 gem "nokogiri", "~> 1.16"
+
+gem "devise", "~> 4.9"
+
+gem "simple_form", "~> 5.3"
