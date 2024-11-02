@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   get "up" => "rails/health#show", as: :rails_health_check
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
@@ -14,6 +13,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home#index"
 
+  devise_for :users
   # Defines the "about-us" path route ("/about-us")
   get "about-us" => "about_us#index", as: :about_us
   get "contact" => "contact#index", as: :contact

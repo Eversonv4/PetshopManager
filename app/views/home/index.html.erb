@@ -1,65 +1,7 @@
 <main>
-  <section class="main-section">
-    <article>
-      <%= image_tag("icons/petshop-logo.svg", class: "petshop-logo") %>
+  <%= render "home/main_section" %>
 
-      <div class="content-container flex-center-between">
-        <div>
-          <h2 class="main-title-bold">
-            TRAGA SEU
-            <%= svg_tag "icons/Pet.svg", class: "pet-icon" %>
-          </h2>
+  <%= render "home/categories_section" %>
 
-          <h3 class="sub-title">dê a ele o tratamento que ele merece.</h3>
-
-          <h3 class="sub-title" style="margin-top: 15vh;">
-            O seu aumiguinho terá tratamento
-            <strong class="vip-text">VIP</strong>
-          </h3>
-        </div>
-
-        <div style="margin-top: auto;">
-          <%= image_tag("pictures/dog-cat.jpg", class: "dog-picture") %>
-        </div>
-      </div>
-    </article>
-  </section>
-
-  <section class="products-section">
-    <div>
-
-      <h3>Confira nossa opções de Categorias</h3>
-
-
-      <div class="product-categories__container">
-        <a href="#">
-          <div class="product-category__item">
-            <%= svg_tag "pictures/categories/dog.svg", class: "products-category__icon" %>
-          </div>
-          <h3>Cães</h3>
-        </a>
-
-        <a href="#">
-          <div class="product-category__item">
-            <%= svg_tag "pictures/categories/cat.svg", class: "products-category__icon" %>
-          </div>
-          <h3>Gatos</h3>
-        </a>
-
-        <a href="#">
-          <div class="product-category__item">
-            <%= svg_tag "pictures/categories/bag-shop.svg", class: "products-category__icon" %>
-          </div>
-          <h3>Rações</h3>
-        </a>
-
-        <a href="#">
-          <div class="product-category__item">
-            <%= svg_tag "pictures/categories/bath-shower.svg", class: "products-category__icon" %>
-          </div>
-          <h3>Banho e Tosa</h3>
-        </a>
-      </div>
-    </div>
-  </section>
+  <%= render "home/bestseller_section" %>
 </main>

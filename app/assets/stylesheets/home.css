@@ -7,6 +7,8 @@ main {
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 100%;
+
+  min-height: 700px;
 }
 
 .main-section article {
@@ -74,7 +76,7 @@ main {
   border-radius: 50%;
 }
 
-.products-section {
+.categories-section {
   background-color: var(--text-white);
 
   & > div {
@@ -84,7 +86,7 @@ main {
   }
 }
 
-.products-section > div > h3 {
+.main-title-section {
   font-family: var(--family-baloo);
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-medium);
@@ -123,4 +125,15 @@ main {
 
 .products-category__icon {
   font-size: 6rem;
+}
+
+
+.best-seller__section {
+  background-color: var(--text-white);
+
+  & > div {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 6.25rem 0;
+  }
 }
