@@ -1,6 +1,6 @@
 <h2>Sign up</h2>
 
-<%= form_with(model: @user, url: admin_users_path, local: true) do |form| %>
+<%= form_with(model: @user, url: admin_users_path, local: true) do |f| %>
   <% if @user.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@user.errors.count, "erro") %> proibiu o cadastro deste usuário:</h2>
@@ -50,6 +50,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit "Cadastrar Usuário" %>
+    <%= f.submit "Cadastrar Usuário" %>
   </div>
 <% end %>
