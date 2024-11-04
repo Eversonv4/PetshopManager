@@ -1,0 +1,55 @@
+<h2>Sign up</h2>
+
+<%= form_with(model: @user, url: admin_users_path, local: true) do |form| %>
+  <% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "erro") %> proibiu o cadastro deste usuário:</h2>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="form-inputs">
+    <div class="input-container">
+      <%= f.label :nome %>
+      <%= f.text_field :nome, required: true, autofocus: true, autocomplete: "nome" %>
+    </div>
+
+    <div class="input-container">
+      <%= f.label :email %>
+      <%= f.email_field :email, required: true, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="input-container">
+      <%= f.label :password %>
+      <%= f.password_field :password, required: true, autocomplete: "new-password" %>
+      <% if @minimum_password_length %>
+        <small><%= "#{@minimum_password_length} characters minimum" %></small>
+      <% end %>
+    </div>
+
+    <div class="input-container">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, required: true, autocomplete: "new-password" %>
+    </div>
+
+    <div class="input-container">
+      <%= f.label :telefone %>
+      <%= f.telephone_field :telefone, required: true, autocomplete: "telefone" %>
+    </div>
+
+    <% if current_user&.try(:admin?) %>
+      <div class="input-container">
+        <%= f.label :role %>
+        <%= f.select :role, User.roles.keys.map { |role| [role.titleize, role] } %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Cadastrar Usuário" %>
+  </div>
+<% end %>

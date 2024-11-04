@@ -12,3 +12,14 @@
 	<%= link_to "Login", new_user_session_path %>
 	<%= link_to "Sign up", new_user_registration_path %>
 <% end %>
+
+<% if user_signed_in? %>
+ <div> Welcome <%= current_user.email %> </div>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+  <%= link_to "Edit", edit_user_registration_path %>
+<% else %>
+  <%= button_to "Sign in", new_user_session_path %>
+<% end %>
+<h1>Hello DigitalOcean!</h1>
+
+<%= link_to "Criar animal", new_animal_path %>

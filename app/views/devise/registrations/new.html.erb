@@ -1,25 +1,70 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+<main class="signup-container" data-controller="signup">
+  <div class="signup-illustration">
+    <%= image_tag("pictures/login/login-ilustration.png", alt: "signup illustration") %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+  <section class="signup-form-container">
+    <div class="signup-form">
+      <h2 class="signup-main-title">Cadastrar</h2>
 
-<%= render "devise/shared/links" %>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <% if resource.errors.any? %>
+          <div class="error_notification">
+            <ul style="padding: 15px;border: 1px solid red;border-radius: 8px;background-color: #ffd8d8;">
+              <% resource.errors_full_messages.each do |message| %>
+                <li style="color: red; padding: 10px 0;"><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="form-inputs">
+          <div class="input-container">
+            <%= f.label :nome %>
+            <%= f.text_field :nome, required: true, autofocus: true, autocomplete: "nome" %>
+          </div>
+
+          <div class="input-container">
+            <%= f.label :email %>
+            <%= f.email_field :email, required: true, autofocus: true, autocomplete: "email" %>
+          </div>
+
+          <div class="input-container">
+            <%= f.label :password, "Senha" %>
+            <%= f.password_field :password, required: true, autocomplete: "new-password" %>
+            <% if @minimum_password_length %>
+              <small><%= "#{@minimum_password_length} characters minimum" %></small>
+            <% end %>
+          </div>
+
+          <div class="input-container">
+            <%= f.label :password_confirmation, "Confirmar Senha" %>
+            <%= f.password_field :password_confirmation, required: true, autocomplete: "new-password" %>
+          </div>
+
+          <div class="input-container">
+            <%= f.label :telefone %>
+            <%= f.telephone_field :telefone, required: true, maxlength: 11, autocomplete: "telefone", data: {action: "input->signup#formatPhoneMask"} %>
+          </div>
+
+          <% if current_user&.try(:admin?) %>
+            <div class="input-container">
+              <%= f.label :role %>
+              <%= f.select :role, User.roles.keys.map { |role| [role.titleize, role] } %>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.submit "Sign up", class: "button-submit" %>
+        </div>
+      <% end %>
+    </div>
+
+  </section>
+</main>
+
+
+
+
+

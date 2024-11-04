@@ -19,4 +19,10 @@ Rails.application.routes.draw do
   get "contact" => "contact#index", as: :contact
   get "shop" => "shop#index", as: :shop
   get "patient_area" => "patient_area#index", as: :patient_area
+
+  resources :animals, only: [ :new, :create, :show ]
+
+  namespace :admin do
+    resources :users, only: [ :new, :create ]
+  end
 end

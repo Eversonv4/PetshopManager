@@ -32,6 +32,21 @@
             <span class="badge-cart">2</span>
           <% end%>
         </li>
+        <% if user_signed_in? %>
+          <li>
+            <%= button_to(destroy_user_session_path, method: :delete, class: "signout-button") do %>
+              <i class="fa fa-sign-out" aria-hidden="true"></i>
+              Sair
+            <% end %>
+          </li>
+          <% else %>
+          <li>
+            <%= link_to(new_user_session_path, class: "login-button") do %>
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+              Login
+            <% end %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

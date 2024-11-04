@@ -1,9 +1,9 @@
-main {
+main.home-container {
   background-color: var(--secondary);
 }
 
 .main-section {
-  background-image: url('assets/icons/bottom-bg.svg');
+  background-image: url('assets/icons/home/bottom-bg.svg');
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 100%;

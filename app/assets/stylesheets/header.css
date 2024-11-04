@@ -73,3 +73,25 @@ header .header__container {
   justify-content: center;
   align-items: center;
 }
+
+.signout-button {
+  background-color: var(--danger-red);
+  color: white;
+  padding: 0.4rem 10px;
+  border-radius: var(--border-radius-small);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  margin-left: 1rem;
+}
+
+.login-button {
+  background-color: var(--);
+  color: white;
+  padding: 0.4rem 10px;
+  border-radius: var(--border-radius-small);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  margin-left: 1rem;
+}

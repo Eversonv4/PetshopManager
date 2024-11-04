@@ -1,0 +1,51 @@
+<% if notice %>
+  <p class="notice-notification" onclick="this.remove()">
+    <%= notice %>
+  </p>
+
+  <script>
+    (() => {
+      const noticeNotification = document.querySelector(".notice-notification");
+      if (noticeNotification) {
+        noticeNotification.classList.add("animation-slide-in-right");
+
+        setTimeout(() => {
+          noticeNotification.classList.remove("animation-slide-in-right");
+          noticeNotification.classList.add("animation-slide-out-right");
+        }, 3000);
+
+        noticeNotification.addEventListener("animationend", (event) => {
+          if (event.animationName === "slideOutToRight") {
+            noticeNotification.remove();
+          }
+        });
+      }
+    })()
+  </script>
+<% end %>
+
+<% if alert %>
+  <p class="alert-notification" onclick="this.remove()">
+    <%= alert %>
+  </p>
+
+  <script>
+    (() => {
+      const alertNotification = document.querySelector(".alert-notification");
+      if (alertNotification) {
+        alertNotification.classList.add("animation-slide-in-right");
+
+        setTimeout(() => {
+          alertNotification.classList.remove("animation-slide-in-right");
+          alertNotification.classList.add("animation-slide-out-right");
+        }, 3000);
+
+        alertNotification.addEventListener("animationend", (event) => {
+          if (event.animationName === "slideOutToRight") {
+            alertNotification.remove();
+          }
+        });
+      }
+    })()
+  </script>
+<% end %>

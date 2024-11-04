@@ -1,0 +1,37 @@
+pt-BR:
+  devise:
+    failure:
+      invalid: "E-mail ou senha inválidos."
+      unauthenticated: "Você precisa estar autenticado para acessar esta página."
+    registrations:
+      signed_up: "Você se registrou com sucesso."
+      account_created: "Sua conta foi criada com sucesso."
+      password_confirmed: "A senha foi confirmada com sucesso."
+      password_confirmation: "A senha e a confirmação de senha precisam ser iguais."
+    sessions:
+      signed_in: "Você está logado com sucesso."
+      signed_out: "Você saiu com sucesso."
+      already_signed_out: "Você já está desconectado."
+    passwords:
+      send_instructions: "Instruções de redefinição de senha foram enviadas."
+      updated: "Sua senha foi atualizada com sucesso."
+    confirmations:
+      confirmed: "Sua conta foi confirmada com sucesso."
+    unlocks:
+      unlocked: "Sua conta foi desbloqueada com sucesso."
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            nome:
+              blank: "O nome não pode ficar em branco."
+            email:
+              blank: "O e-mail não pode ficar em branco."
+              taken: "Esse e-mail já está em uso."
+            password:
+              blank: "A senha não pode ficar em branco."
+            password_confirmation:
+              blank: "A confirmação da senha não pode ficar em branco."
+              confirmation: "A senha e a confirmação de senha precisam ser iguais."
