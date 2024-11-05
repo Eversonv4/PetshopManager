@@ -10,10 +10,4 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [ :nome, :role, :telefone ])
     devise_parameter_sanitizer.permit(:account_update, keys: [ :nome, :role, :telefone ])
   end
-
-  def authenticate_user!
-    unless user_signed_in?
-      redirect_to new_user_session_path, alert: "Você precisa estar logado para acessar esta página."
-    end
-  end
 end

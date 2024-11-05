@@ -1,6 +1,6 @@
 class AnimalsController < ApplicationController
   before_action :authenticate_user! # Devise method to ensure user is logged in
-  before_action :verify_client_role # Custom method to ensure user is a client
+  # before_action :verify_client_role # Custom method to ensure user is a client
 
   def new
     @animal = Animal.new
