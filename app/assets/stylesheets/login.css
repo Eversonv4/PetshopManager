@@ -52,7 +52,7 @@
 
 .input-container label {
   display: block;
-  font-size: var(--font-size-xxsmall);
+  font-size: var(--font-size-xsmall);
   font-weight: var(--font-weight-medium);
   color: var(--text-grey-dark);
   font-family: var(--family-instrument);
@@ -72,7 +72,7 @@
 }
 
 .login-input-label {
-  font-size: var(--font-size-xxsmall);
+  font-size: var(--font-size-xsmall);
   font-weight: var(--font-weight-medium);
   color: var(--text-grey-dark);
   font-family: var(--family-instrument);
@@ -95,14 +95,45 @@
 }
 
 .login-form .register-title {
-  font-size: var(--font-size-xxsmall);
+  font-size: var(--font-size-xsmall);
   font-weight: var(--font-weight-medium);
   color: var(--text-grey-dark);
   font-family: var(--family-instrument);
 
   & a {
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
     color: var(--primary);
+
     text-decoration: underline;
+
+    margin-left: 4px;
+
+    &:hover {
+      color: var(--primary-light);
+    }
+  }
+}
+
+.login-form .error-message {
+  color: var(--error);
+  font-size: var(--font-size-xsmall);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--family-instrument);
+  margin-top: 0.5rem;
+}
+
+.login-form .recover-password-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  & a {
+    color: var(--primary);
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-medium);
+    font-family: var(--family-instrument);
 
     &:hover {
       color: var(--primary-light);

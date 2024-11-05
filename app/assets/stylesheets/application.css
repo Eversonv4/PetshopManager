@@ -31,7 +31,8 @@
   --family-instrument: "Instrument Sans", serif;
   --family-baloo: "Baloo 2", sans-serif;
 
-  --font-size-xxsmall: 1rem;
+  --font-size-xxsmall: 0.8rem;
+  --font-size-xsmall: 1rem;
   --font-size-small: 1.2rem;
   --font-size-medium: 1.5rem;
   --font-size-mid-lg: 2rem;

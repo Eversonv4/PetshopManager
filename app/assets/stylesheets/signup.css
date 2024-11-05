@@ -53,7 +53,7 @@
 
 .signup-form .input-container label {
   display: block;
-  font-size: var(--font-size-xxsmall);
+  font-size: var(--font-size-xsmall);
   font-weight: var(--font-weight-medium);
   color: var(--text-grey-dark);
   font-family: var(--family-instrument);
@@ -73,7 +73,7 @@
 }
 
 .signup-form .signup-input-label {
-  font-size: var(--font-size-xxsmall);
+  font-size: var(--font-size-xsmall);
   font-weight: var(--font-weight-medium);
   color: var(--text-grey-dark);
   font-family: var(--family-instrument);

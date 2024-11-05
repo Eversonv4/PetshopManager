@@ -63,3 +63,5 @@ gem "nokogiri", "~> 1.16"
 gem "devise", "~> 4.9"
 
 gem "simple_form", "~> 5.3"
+
+gem "rspec", "~> 3.13"
