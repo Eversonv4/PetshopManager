@@ -3,7 +3,7 @@ main.home-container {
 }
 
 .main-section {
-  background-image: url('assets/icons/home/bottom-bg.svg');
+  background-image: url("assets/icons/home/bottom-bg.svg");
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 100%;
@@ -47,7 +47,8 @@ main.home-container {
   font-family: inherit;
   font-size: 7rem;
   color: var(--secondary);
-  text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary), -1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
+  text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary),
+    -1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
 }
 
 .pet-icon {
@@ -127,7 +128,6 @@ main.home-container {
   font-size: 6rem;
 }
 
-
 .best-seller__section {
   background-color: var(--text-white);
 
@@ -135,5 +135,46 @@ main.home-container {
     max-width: 1300px;
     margin: 0 auto;
     padding: 6.25rem 0;
+  }
+}
+
+.best-seller__section .cards-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+  & article {
+    background-color: var(--white);
+    /* border: 1px solid green; */
+    border-radius: 1rem;
+    overflow: hidden;
+
+    box-shadow: var(--shadow-small);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transition: all 0.3s ease;
+      transform: scale(1.1);
+    }
+  }
+
+  & article .product-info-div {
+    padding: 8px 1rem;
+  }
+
+  & article .product-name {
+    font-family: var(--family-poppins);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-dark);
+  }
+
+  & article .product-value {
+    font-family: var(--family-poppins);
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-regular);
+    color: var(--text-dark);
   }
 }
