@@ -34,3 +34,8 @@ Animal.create(
   peso: 2.5,
   cliente_id: cliente_user.id
 )
+
+Category.find_or_create_by!(name: "Cachorro")
+Category.find_or_create_by!(name: "Gato")
+Category.find_or_create_by!(name: "Rações")
+Category.find_or_create_by!(name: "Higiene")

@@ -78,7 +78,6 @@ class ProductsController < ApplicationController
       flash[:notice] = "Produtos importados com sucesso!"
     rescue StandardError => e
       flash[:alert] = "Erro ao importar produtos: #{e.message}"
-      return redirect_to upload_csv_products_path
     end
 
     redirect_to upload_csv_products_path
