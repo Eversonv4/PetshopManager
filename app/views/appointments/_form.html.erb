@@ -1,0 +1,50 @@
+<div data-controller="animal-selector">
+  <%= form_with(model: appointment) do |f| %>
+    <% if appointment.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+        <ul>
+          <% appointment.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <% if current_user.admin? %>
+      <div>
+        <%= label_tag :user_id, "Selecionar Usuário" %>
+        <%= select_tag :user_id, options_from_collection_for_select(@users, :id, :nome),
+                       include_blank: "Selecione um usuário",
+                       data: { action: "change->animal-selector#loadAnimals", animal_selector_target: "userSelect" } %>
+      </div>
+
+      <div>
+        <%= label_tag :animal_id, "Selecionar Animal" %>
+        <%= select_tag :animal_id, "", include_blank: "Selecione um animal",
+                       data: { animal_selector_target: "animalSelect" } %>
+      </div>
+    <% else %>
+      <div>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= label_tag :animal_id, "Selecionar Animal" %>
+        <%= f.collection_select :animal_id, current_user.animals, :id, :nome, prompt: "Selecione um animal" %>
+      </div>
+    <% end %>
+
+    <div>
+      <%= f.label :observacao, "Observação" %>
+      <%= f.text_area :observacao %>
+    </div>
+
+    <div style="visibility: hidden;">
+      <%= f.label :aberto, "Status" %>
+      <%= f.check_box :aberto, checked: true %> Aberto
+    </div>
+
+    <%= f.submit "Criar Agendamento" %>
+  <% end %>
+</div>
+
+<%# javascript_include_tag "appointments" %>

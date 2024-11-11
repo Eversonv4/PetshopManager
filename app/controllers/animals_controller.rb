@@ -2,6 +2,10 @@ class AnimalsController < ApplicationController
   before_action :authenticate_user!
   before_action :verify_client_role
 
+  def index
+    @animals = current_user.animals
+  end
+
   def new
     @animal = Animal.new
   end

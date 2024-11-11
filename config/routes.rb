@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  resources :products do
+    collection do
+      get :upload_csv
+      post :import_csv
+    end
+  end
+  resources :categories
+  resources :appointments do
+    collection do
+      get :load_animals
+    end
+  end
+
   get "favorite/index"
   get "cart/index"
   get "up" => "rails/health#show", as: :rails_health_check
@@ -22,7 +35,9 @@ Rails.application.routes.draw do
   get "shop" => "shop#index", as: :shop
   get "patient_area" => "patient_area#index", as: :patient_area
 
-  resources :animals, only: [ :new, :create, :show ]
+  resources :animals do
+    get "animals" => "animals#index"
+  end
 
   namespace :admin do
     resources :users, only: [ :new, :create ]

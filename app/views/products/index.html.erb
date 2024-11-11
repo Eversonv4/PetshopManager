@@ -1,0 +1,17 @@
+<% content_for :title, "Produtos" %>
+
+
+<section class="best-seller__section">
+  <h2 class="main-title-section" style="margin-top: 2rem;">Produtos</h2>
+  <div id="products" class="cards-container" style="max-width:1300px;flex-wrap:wrap;margin-top:0;padding-top:4rem !important;">
+    <% @products.each do |product| %>
+      <%= link_to(product) do %>
+        <%= render product %>
+      <% end %>
+    <% end %>
+
+    <% if @products.empty? %>
+      <h2>Nenhum produto encontrado</h2>
+    <% end %>
+  </div>
+</section>

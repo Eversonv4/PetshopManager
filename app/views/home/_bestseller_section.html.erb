@@ -2,45 +2,18 @@
   <div>
     <h3 class="main-title-section">Mais Vendidos</h3>
 
-    <div
-      class="cards-container"
-    >
-      <article>
-        <div>
-          <%= image_tag "pictures/bestsellers/product1.webp", style: "width:250px;"%>
-        </div>
-        <div class="product-info-div">
-          <h3 class="product-name">Nome do Produto</h3>
-          <p class="product-value">R$ 100,00</p>
-        </div>
-      </article>
-      <article>
-        <div>
-          <%= image_tag "pictures/bestsellers/product2.webp", style: "width:250px;"%>
-        </div>
-        <div class="product-info-div">
-          <h3 class="product-name">Nome do Produto</h3>
-          <p class="product-value">R$ 100,00</p>
-        </div>
-      </article>
-      <article>
-        <div>
-          <%= image_tag "pictures/bestsellers/product3.webp", style: "width:250px;"%>
-        </div>
-        <div class="product-info-div">
-          <h3 class="product-name">Nome do Produto</h3>
-          <p class="product-value">R$ 100,00</p>
-        </div>
-      </article>
-      <article>
-        <div>
-          <%= image_tag "pictures/bestsellers/product4.webp", style: "width:250px;"%>
-        </div>
-        <div class="product-info-div">
-          <h3 class="product-name">Nome do Produto</h3>
-          <p class="product-value">R$ 100,00</p>
-        </div>
-      </article>
+    <div class="cards-container">
+      <% @products.each do |product| %>
+        <article style="max-width: 300px;">
+          <div>
+            <%= image_tag product.imagem, style: "width:250px;"%>
+          </div>
+          <div class="product-info-div">
+            <h3 class="product-name"><%= product.nome.slice(0,38) %></h3>
+            <p class="product-value">R$ <%= product.preco.to_s.sub(".",",") %></p>
+          </div>
+        </article>
+      <% end %>
     </div>
   </div>
 </section>

@@ -1,4 +1,4 @@
-<h1>Cadastrar Novo Animal</h1>
+<h1>Cadastrar Novo Pet</h1>
 
 <%= form_with(model: @animal, local: true) do |form| %>
   <% if @animal.errors.any? %>
@@ -36,3 +36,5 @@
     <%= form.submit "Cadastrar Animal" %>
   </div>
 <% end %>
+
+<%= link_to "Meus Pets", animals_path %> <br />

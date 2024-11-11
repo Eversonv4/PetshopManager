@@ -1,0 +1,15 @@
+.appointments-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.appointments-container .appointment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--shadow-small);
+  margin-bottom: 1rem;
+}

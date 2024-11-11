@@ -4,42 +4,24 @@
       <%= link_to "PetShop Manager", root_path %>
     </div>
     <div class="header__nav">
-      <ul class="flex-center-between">
+      <ul class="flex-center-between" style="gap: 2rem;">
         <li>
-          <%= link_to "Home", root_path %>
         </li>
         <li>
-          <%= link_to "Shop", shop_path,  class: "header-btn-shop" %>
+          <%= link_to "Home", root_path, class: current_page?(root_path) && 'header-btn-shop' %>
         </li>
         <li>
-          <%= link_to "Contato", contact_path %>
+          <%= link_to "Shop", shop_path,  class: current_page?(shop_path) && 'header-btn-shop' %>
         </li>
         <li>
-          <%= link_to "Quem Somos", about_us_path %>
+          <%= link_to "Contato", contact_path, class: current_page?(contact_path) && 'header-btn-shop' %>
         </li>
         <li>
-          <%= link_to "Area do paciente", patient_area_path, class: "header-btn-highlight" %>
-        </li>
-        <li>
-          <%= link_to (favorite_index_path), class: "header-favorite__container" do %>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <span class="badge-favorite">1</span>
-          <% end%>
-        </li>
-        <li>
-          <%= link_to (cart_index_path), class: "header-cart__container" do %>
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            <span class="badge-cart">2</span>
-          <% end%>
+          <%= link_to "Quem Somos", about_us_path, class: current_page?(about_us_path) && 'header-btn-shop' %>
         </li>
         <% if user_signed_in? %>
-          <li>
-            <%= button_to(destroy_user_session_path, method: :delete, class: "signout-button") do %>
-              <i class="fa fa-sign-out" aria-hidden="true"></i>
-              Sair
-            <% end %>
-          </li>
-          <% else %>
+          <%= render "header/authenticated_content" %>
+        <% else %>
           <li>
             <%= link_to(new_user_session_path, class: "login-button") do %>
             <i class="fa fa-sign-in" aria-hidden="true"></i>

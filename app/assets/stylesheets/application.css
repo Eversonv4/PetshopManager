@@ -26,6 +26,9 @@
   --grey-input: #eaf1f7;
   --gray-border-light: #e9ecef;
   --danger-red: #dc3545;
+  --info-blue: #007bff;
+  --success-green: #28a745;
+  --gray-darker: #6c757d;
 
   --family-poppins: "Poppins", sans-serif;
   --family-instrument: "Instrument Sans", serif;
@@ -96,6 +99,12 @@ abbr[title="required"] {
   justify-content: space-between;
 }
 
+.flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .notice-notification {
   color: #ffffff;
   background-color: #a1d360;
@@ -124,7 +133,6 @@ abbr[title="required"] {
   animation: slideInFromRight 0.6s ease forwards;
 }
 
-/* Animação de saída */
 .animation-slide-out-right {
   animation: slideOutToRight 0.6s ease forwards;
 }
@@ -145,4 +153,30 @@ abbr[title="required"] {
   to {
     transform: translateX(120%);
   }
+}
+
+.btn-action {
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: var(--border-radius-small);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  border: none;
+  cursor: pointer;
+}
+
+.bg-green {
+  background-color: var(--success-green);
+}
+.bg-blue {
+  background-color: var(--info-blue);
+}
+.bg-yellow {
+  background-color: var(--primary-light);
+}
+.bg-red {
+  background-color: var(--danger-red);
+}
+.bg-gray {
+  background-color: var(--gray-darker);
 }

@@ -1,0 +1,19 @@
+<% content_for :title, "Appointments" %>
+
+<main id="appointments" class="appointments-container">
+  <div>
+    <h1><%= @page_title %></h1>
+
+    <% if current_user.cliente? %>
+      <div style="display: flex; justify-content: flex-end; gap: 1rem;">
+        <%= link_to "Meus Pets", animals_path, class: "btn-action bg-blue" %> <br />
+        <%= link_to "Cadastrar novo Pet", new_animal_path, class: "btn-action bg-green" %> <br />
+        <%= link_to "Nova Consulta", new_appointment_path, class: "btn-action bg-yellow" %>
+      </div>
+    <% end %>
+
+    <% @appointments.each do |appointment| %>
+      <%= render appointment %>
+    <% end %>
+  </div>
+</main>

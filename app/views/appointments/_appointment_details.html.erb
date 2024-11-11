@@ -1,0 +1,24 @@
+<div id="<%= dom_id appointment %>" class="appointment-item">
+
+  <div style="max-width: 250px; display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 10px;">
+    <p>
+      <strong>Dono:</strong>
+      <%= appointment.user.nome %>
+    </p>
+
+    <p>
+      <strong>Nome do Pet:</strong>
+      <%= appointment.animal.nome %>
+    </p>
+
+    <p>
+      <strong>Observacao:</strong>
+      <%= appointment.observacao %>
+    </p>
+  </div>
+
+  <p>
+    <strong>Data de criação:</strong>
+    <%= appointment.created_at.strftime("%d/%m/%Y") %>
+  </p>
+</div>

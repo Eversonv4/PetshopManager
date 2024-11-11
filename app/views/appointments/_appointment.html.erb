@@ -1,0 +1,32 @@
+<div id="<%= dom_id appointment %>" class="appointment-item">
+
+  <div style="max-width: 250px; display: flex; flex-direction: column; gap: 0.4rem;">
+    <p>
+      <strong>Dono:</strong>
+      <%= appointment.user.nome %>
+    </p>
+
+    <p>
+      <strong>Nome do Pet:</strong>
+      <%= appointment.animal.nome %>
+    </p>
+
+    <p>
+      <strong>Observacao:</strong>
+      <%= appointment.observacao %>
+    </p>
+  </div>
+
+  <p>
+    <strong>ativo:</strong>
+    <%= appointment.aberto ? 'Sim' : 'Não' %>
+  </p>
+
+  <p>
+    <%= link_to "Detalhes do agendamento", appointment, style: "color: var(--info-blue);border: 1px solid var(--info-blue); padding: 5px 12px;border-radius: 4px;" %>
+  </p>
+
+  <p>
+    Data de criação: <%= appointment.created_at.strftime("%d/%m/%Y") %>
+  </p>
+</div>

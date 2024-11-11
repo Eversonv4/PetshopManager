@@ -5,28 +5,28 @@
 
 
     <div class="product-categories__container">
-      <%= link_to("#") do %>
+      <%= link_to("/products?category=Cachorro") do %>
         <div class="product-category__item">
           <%= svg_tag "pictures/categories/dog.svg", class: "products-category__icon" %>
         </div>
         <h3>Cães</h3>
       <% end %>
 
-      <%= link_to("#") do %>
+      <%= link_to("/products?category=Gato") do %>
         <div class="product-category__item">
           <%= svg_tag "pictures/categories/cat.svg", class: "products-category__icon" %>
         </div>
         <h3>Gatos</h3>
       <% end %>
 
-      <%= link_to("#") do %>
+      <%= link_to("/products?category=Rações") do %>
         <div class="product-category__item">
           <%= svg_tag "pictures/categories/bag-shop.svg", class: "products-category__icon" %>
         </div>
         <h3>Rações</h3>
       <% end %>
 
-      <%= link_to("#") do %>
+      <%= link_to("/products?category=Higiene") do %>
         <div class="product-category__item">
           <%= svg_tag "pictures/categories/bath-shower.svg", class: "products-category__icon" %>
         </div>

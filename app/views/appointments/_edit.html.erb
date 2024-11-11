@@ -1,0 +1,34 @@
+<div>
+  <%= form_with(model: @appointment) do |f| %>
+    <% if current_user.admin? %>
+      <div>
+        <%= f.label :user_id, "Selecionar Usuário" %>
+        <%= f.collection_select :user_id, @users, :id, :nome, { include_blank: "Selecione um usuário" }, { data: { action: "change->animal-selector#loadAnimals", animal_selector_target: "userSelect" } } %>
+      </div>
+      <div>
+        <%= f.label :animal_id, "Selecionar Animal" %>
+        <%= f.collection_select :animal_id, @animals, :id, :nome, prompt: "Selecione um animal" %>
+      </div>
+    <% else %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <div>
+        <%= f.label :animal_id, "Selecionar Animal" %>
+        <%= f.collection_select :animal_id, current_user.animals, :id, :nome, prompt: "Selecione um animal" %>
+      </div>
+    <% end %>
+
+    <div>
+      <%= f.label :observacao, "Observação" %>
+      <%= f.text_area :observacao %>
+    </div>
+
+    <div>
+      <%= f.label :aberto, "Status" %>
+      <%= f.check_box :aberto %> Aberto
+    </div>
+
+    <%= f.submit "Editar Agendamento" %>
+  <% end %>
+</div>
+
+<%# javascript_include_tag "appointments" %>

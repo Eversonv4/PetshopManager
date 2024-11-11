@@ -1,0 +1,12 @@
+<div class="flex-center-center" style="margin-top: 2rem;">
+  <%= form_with url: import_csv_products_path, multipart: true, local: true do |f| %>
+    <div>
+      <%= f.label :file, "Selecione o arquivo CSV:" %>
+      <%= f.file_field :file, accept: ".csv" %>
+    </div>
+
+    <div>
+      <%= f.submit "Importar CSV", class: "btn-action bg-green" %>
+    </div>
+  <% end %>
+</div>

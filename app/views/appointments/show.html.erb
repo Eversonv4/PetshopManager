@@ -1,0 +1,12 @@
+<div style="margin: 0 auto;max-width: 1300px;margin-top: 2rem;">
+  <%= render "appointments/appointment_details", appointment: @appointment %>
+
+
+  <div style="margin-top: 1rem;display: flex;gap: 1rem;">
+    <%= link_to "Editar consulta", edit_appointment_path(@appointment), class: "btn-action bg-yellow" %>
+
+    <%= button_to "Apagar consulta", @appointment, data: { confirm: "Tem certeza que deseja apagar essa consulta?", turbo_confirm: "Tem certeza que deseja apagar essa consulta?" }, method: :delete,  class: "btn-action bg-red" %>
+
+    <%= link_to "Voltar para agendamentos", appointments_path, class: "btn-action bg-gray" %>
+  </div>
+</div>

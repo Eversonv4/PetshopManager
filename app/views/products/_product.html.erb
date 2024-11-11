@@ -1,0 +1,10 @@
+<article id="<%= dom_id product %>" style="max-width:250px;margin-bottom:1rem;">
+  <div>
+    <%= image_tag(product.imagem, style: "width:250px;") %>
+  </div>
+  <div class="product-info-div">
+    <h3 class="product-name"><%= product.nome.slice(0,30) %></h3>
+    <p class="product-value" style="margin-top: 6px;">R$ <%= product.preco %></p>
+    <p class="product-value" style="margin-top: 6px;">Estoque <%= product.estoque %></p>
+  </div>
+</article>
