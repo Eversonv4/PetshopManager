@@ -58,7 +58,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "nokogiri", "~> 1.16"
+gem "nokogiri", "~> 1.17"
 
 gem "devise", "~> 4.9"
 
