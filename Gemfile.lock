@@ -153,9 +153,9 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     nio4r (2.7.3)
-    nokogiri (1.16.7-x64-mingw-ucrt)
+    nokogiri (1.17.2-x64-mingw-ucrt)
       racc (~> 1.4)
-    nokogiri (1.16.7-x86_64-linux)
+    nokogiri (1.17.2-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.26.3)
@@ -329,7 +329,7 @@ DEPENDENCIES
   dotenv-rails (~> 2.1, >= 2.1.1)
   importmap-rails
   jbuilder
-  nokogiri (~> 1.16)
+  nokogiri (~> 1.17)
   puma (>= 5.0)
   rails (~> 7.2.1)
   rspec (~> 3.13)
